@@ -6,8 +6,19 @@ POST http://localhost:3000/post
 Content-Type: application/json
 
 {
-  "title": "My First Blog Post",
+  "title": "My second Blog Post",
   "content": "This is the content of my first blog post.",
   "category": "Technology",
   "tags": ["Tech", "Programming"]
+}
+
+###
+GET http://localhost:3000/post/08fab2fd-28e1-4235-b0eb-fb55364c5656
+
+###
+PUT http://localhost:3000/post/08fab2fd-28e1-4235-b0eb-fb55364c5656
+Content-Type: application/json
+
+{
+  "content": "ddd"
 }

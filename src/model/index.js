@@ -19,4 +19,33 @@ export class ModelPost {
 
         return data
     }
+
+    static async findById(id) {
+        const idPost = data.findIndex(el => el.id === id)
+        // console.log('index', idPost)
+        if (idPost === -1) {
+            return 404
+        }
+
+        const post = data?.[idPost]
+
+        return post
+    }
+
+    static async updatePost(id, body) {
+        const idPost = data.findIndex(el => el.id === id)
+
+        if (idPost === -1) {
+            return 404
+        }
+
+        data[idPost] = {
+            ...data?.[idPost],
+            ...body
+        }
+
+        const post = data?.[idPost]
+
+        return post
+    }
 }
