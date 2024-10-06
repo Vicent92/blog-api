@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto'
 
-const data = []
+let data = []
 
 export class ModelPost {
 
@@ -47,5 +47,16 @@ export class ModelPost {
         const post = data?.[idPost]
 
         return post
+    }
+
+    static async deletePost(idPost) {
+        const indexPost = data.findIndex(el => el.id === idPost)
+
+        if (indexPost === -1) 404
+
+        const dataFiltered = [ ...data.slice(0, indexPost), ...data.slice(indexPost+1) ]
+        data = dataFiltered
+
+        return data
     }
 }

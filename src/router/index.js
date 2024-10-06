@@ -7,5 +7,6 @@ router.get('/', ControllerPost.getAll)
 router.post('/', ControllerPost.createPost)
 router.get('/:id', ControllerPost.findById)
 router.put('/:id', ControllerPost.updatePost)
+router.delete('/:id', ControllerPost.deletePost)
 
 export { router }

@@ -50,4 +50,15 @@ export class ControllerPost {
 
         res.status(200).json(post)
     }
+
+    static async deletePost(req, res) {
+        const { id } = req.params
+        const post = await ModelPost.deletePost(id)
+
+        if (post === 404) {
+            res.status(404).json({ error: "Post not found" })
+        }
+
+        res.status(204).json({post})
+    }   
 }

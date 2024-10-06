@@ -6,7 +6,7 @@ POST http://localhost:3000/post
 Content-Type: application/json
 
 {
-  "title": "My second Blog Post",
+  "title": "My tttt Blog Post",
   "content": "This is the content of my first blog post.",
   "category": "Technology",
   "tags": ["Tech", "Programming"]
@@ -16,9 +16,12 @@ Content-Type: application/json
 GET http://localhost:3000/post/08fab2fd-28e1-4235-b0eb-fb55364c5656
 
 ###
-PUT http://localhost:3000/post/08fab2fd-28e1-4235-b0eb-fb55364c5656
+PUT http://localhost:3000/post/9ddd81f8-1ddb-4187-89cf-839b0ff57bf0
 Content-Type: application/json
 
 {
   "content": "ddd"
 }
+
+###
+DELETE http://localhost:3000/post/c8dd5918-1bcf-4467-a34b-f94968bfb368
